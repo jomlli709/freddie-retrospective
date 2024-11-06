@@ -6,8 +6,8 @@ function getWeather() {
     .then(data => {
       const current = data.current_weather;
       document.getElementById('weatherInfo').innerHTML = `
-        <p>Temperature: ${current.temperature}°C</p>
-        <p>Wind Speed: ${current.windspeed} m/s</p>
+         <p>Temperature: ${celsiusToFahrenheit(current.temperature)}°F</p>
+         <p>Wind Speed: ${current.windspeed} m/s</p>
       `;
     })
     .catch(error => console.error("Error fetching data:", error));
