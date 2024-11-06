@@ -9,7 +9,7 @@
 
 
 $("button").click(function(){
-    $.getJSON("https://barrycumbie.github.io/barrycumbie/data.json", function(result){
+    $.getJSON("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m", function(result){
       $.each(result, function(i, field){
         $("div").append(field + " ");
       });
